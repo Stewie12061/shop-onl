@@ -50,9 +50,9 @@ body{
   .navbar-fixed{
     width: 100%;
     position: fixed;
-    animation: gotoTop 1s;
+    animation: gototop 1s;
     top: 0;
-    z-index: 9999;
+    z-index: 99999999;
   }
 
   #go-top{
