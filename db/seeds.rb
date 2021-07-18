@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Product.create{[
+Product.destroy_all
+[
         {
-        
         title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
         price: 109.95,
         description: "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
@@ -185,5 +185,4 @@ Product.create{[
         category: "women's clothing",
         image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         }
-        ]
-    }
+].each{|product| Product.create(title: product[:title], price: product[:price], description: product[:description])}
