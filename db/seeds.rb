@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
+Category.destroy_all
 [
         {
         title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -185,4 +186,7 @@ Product.destroy_all
         category: "women's clothing",
         image: "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
         }
-].each{|product| Product.create(title: product[:title], price: product[:price], description: product[:description])}
+].each do |product| 
+  category = Category.find_or_create_by(name: product[:category])
+  Product.create(title: product[:title], description: product[:description], price: product[:price], category_id: category.id)
+end
