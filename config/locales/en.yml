@@ -46,3 +46,8 @@ en:
     quantity: Quantity
     buy: Buy
     addtocart: Add To Cart
+
+  users:
+    login: Login
+    logout: Logout
+    logout_confirm: Are you sure?

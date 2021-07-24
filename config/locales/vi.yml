@@ -46,3 +46,8 @@ vi:
     quantity: Số lượng
     buy: Mua hàng
     addtocart: Thêm vào giỏ
+
+  users:
+    login: Đăng nhập
+    logout: Đăng xuất
+    logout_confirm: Bạn chắc trứuu?

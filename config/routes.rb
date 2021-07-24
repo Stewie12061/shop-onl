@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'
+  }
   get '/contact', controller: :contact, action: :index
   get '/about', controller: :about, action: :index
   # get '/products', controller: :products, action: :index
