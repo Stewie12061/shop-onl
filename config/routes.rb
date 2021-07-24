@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get '/contact', controller: :contact, action: :index
   get '/about', controller: :about, action: :index
   # get '/products', controller: :products, action: :index
